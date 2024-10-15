@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <script>
+        window.onload = function() {
+            @if ($errors->any())
+                let errorMessages = "";
+                @foreach ($errors->all() as $error)
+                    errorMessages += "{{ $error }}\n";
+                @endforeach
+                alert(errorMessages);
+            @endif
+
+            @if (session('success'))
+                alert("{{ session('success') }}");
+            @endif
+
+            @if (session('error'))
+                alert("{{ session('error') }}");
+            @endif
+        }
+    </script>
+</head>
+<body>
+    <!-- Your login form here -->
+    <form action="{{ route('admin.login') }}" method="POST">
+        @csrf
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ old('email') }}">
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+ $(document).ready(function() {
+    // Function to validate form fields
+    function validateForm() {
+        let isValid = true;
+
+         const mobileNo = $('input[name="phone_no"]').val().trim();
+        if (!/^\d{10}$/.test(mobileNo)) {
+            $('input[name="phone_no"]').next('.text-danger').remove();
+            $('input[name="phone_no"]').after('<div class="text-danger">Please enter a valid 10-digit mobile number.</div>');
+            isValid = false;
+        } else {
+            $('input[name="phone_no"]').next('.text-danger').remove();
+        }
+
+        // Validate Email
+        const email = $('input[name="email"]').val().trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email == '') {
+            $('input[name="email"]').next('.text-danger').remove();
+            $('input[name="email"]').after('<div class="text-danger">Email is required.</div>');
+            isValid = false;
+        } else if (!emailPattern.test(email)) {
+            $('input[name="email"]').next('.text-danger').remove();
+            $('input[name="email"]').after('<div class="text-danger">Please enter a valid email address.</div>');
+            isValid = false;
+        } else {
+            $('input[name="email"]').next('.text-danger').remove();
+        }
+            return isValid;
+    }
+
+    // Form submission event
+    $('form').on('submit', function(e) {
+        if (!validateForm()) {
+            e.preventDefault(); // Prevent form submission if validation fails
+        }
+    });
+
+    // Allow only numeric input for mobile number
+    $('input[name="phone_no"]').on('keypress', function(e) {
+        if (e.which < 48 || e.which > 57) {
+            e.preventDefault();
+        }
+    });
+});
+
+
+// message remove after 10 sec
+$(document).ready(function() {
+    // Check if there's a success message
+    if ($('.alert-success').length > 0) {
+        // Set a timeout to remove the success message after 10 seconds
+        setTimeout(function() {
+            $('.alert-success').fadeOut('slow', function() {
+                $(this).remove(); // Optionally remove it from the DOM
+            });
+        }, 10000); // 10000 milliseconds = 10 seconds
+    }
+});

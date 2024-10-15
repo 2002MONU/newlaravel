@@ -1,0 +1,13 @@
+ @php
+                        $images = json_decode($item->images, true);
+                @endphp
+                
+               @if(!empty($images) && count($images) > 0)
+                    <a href="{{ url('door-category', $item->slug1) }}">
+                        <img class="image-1" src="{{ asset('website/doortype/' . $images[0]) }}" alt="{{ $item->titletype }}">
+                    </a>
+                @else
+                    <div class="no-image">No records found</div>
+                @endif
+
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layou

@@ -1,0 +1,192 @@
+@extends('frontend.layout.app',['meta_title' => $meta_title ?? "",'meta_keywords' => $meta_keywords ?? "",'meta_description' => $meta_description ?? ""])
+@section('content')
+      <!-- Start Breadcrumb 
+    ============================================= -->
+    <div class="breadcrumb-area bg-cover shadow dark text-center text-light" style="background-image: url({{ asset('frontend/assets/img/breadcrumb-img.jpg') }});">
+        <div class="breadcrum-shape">
+            <img src="{{ asset('frontend/assets/img/shape/50.png') }}" alt="Image Not Found">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <h1>Our Team</h1>
+                    <ul class="breadcrumb">
+                        <li><a href="{{ route('frontend.home')}}"><i class="fas fa-home"></i> Home</a></li>
+                        <li>Team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Breadcrumb -->
+
+
+
+    <!-- Start Aobut 
+    ============================================= -->
+    <div class="about-style-two-area overflow-hidden bg-contain default-padding" style="background-image: url(assets/img/shape/29.png);">
+        <div class="container">
+            <div class="row align-center">
+
+                <div class="col-lg-5 about-style-two">
+                    <div class="thumb">
+                        <img src="{{ asset('admin/teamaboutImage/'.$teamabout->image) }}" alt="Image Not Found">
+                        <img src="{{ asset('admin/teamaboutImage/'.$teamabout->image_2) }}" alt="Image Not Found">
+                        <div class="experience">
+                            <h2><strong>{{ $teamabout->year }}+</strong> Years experience</h2>
+                        </div>
+                        <div class="shape">
+                            <img src="{{ asset('frontend/assets/img/shape/anim-5.png') }}" alt="Shape">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-style-two col-lg-6 offset-lg-1">
+                    <h2 class="title">{!! nl2br(e($teamabout->heading)) !!}</h2>
+                    <p>
+                       {!! $teamabout->description !!}
+                    </p>
+                    <!-- <div class="default-features mt-30">
+                        <div class="default-feature-item">
+                            <a href="#founders">
+                                <i class="flaticon-progress"></i>
+                                <h4>Founders <br> of ECMAS</h4>
+                            </a>
+                        </div>
+                        <div class="default-feature-item">
+                            <a href="#managers">
+                                <i class="flaticon-progress"></i>
+                                <h4>Managers <br> of ECMAS</h4>
+                            </a>
+                        </div>
+                        <div class="default-feature-item">
+                            <a href="#team">
+                                <i class="flaticon-progress"></i>
+                                <h4>Team <br> of ECMAS</h4>
+                            </a>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+
+    <!-- Start Team 
+    ============================================= -->
+    <div class="team-style-onea-rea default-padding-top pb-70 pb-xs-0 bg-contain-center bg-gray" style="background-image: url({{ asset('frontend/assets/img/shape/18.png') }});" id="founders">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <!-- <h4 class="sub-heading">Team Members</h4> -->
+                        <h2 class="title">Team Members</h2>
+                        <div class="devider"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                @foreach ($team as $data )
+                    
+                <div class="col-xl-3 col-md-6">
+                    <div class="team-style-one">
+                        <div class="thumb">
+                            <img src="{{ asset('admin/teamImage/'.$data->image) }}" alt="Image Not Found">
+                        </div>
+                        <div class="info">
+                            <span>{{ $data->designation }}</span>
+                            <h4><a href="#">{{ $data->name }}</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                @endforeach
+              
+            </div>
+        </div>
+    </div>
+    <!-- End Team Area -->
+
+    <!-- Start Team 
+    ============================================= -->
+    <div class="team-style-onea-rea default-padding-top pb-70 pb-xs-0 bg-contain-center" style="background-image: url(assets/img/shape/18.png);" id="managers">
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <h4 class="sub-heading">Team Members</h4>
+                        <h2 class="title">Managing Team</h2>
+                        <div class="devider"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="row justify-content-center">
+                @foreach ($team2 as $data )
+                    
+                <!-- Single Item -->
+                <div class="col-xl-3 col-md-6">
+                    <div class="team-style-one">
+                        <div class="thumb">
+                            <img src="{{ asset('admin/teamImage/'.$data->image) }}" alt="Image Not Found">
+                        </div>
+                        <div class="info">
+                            <span>{{ $data->designation }}</span>
+                            <h4><a href="#">{{ $data->name }}</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Single Item -->
+                @endforeach
+               
+            </div>
+        </div>
+    </div>
+    <!-- End Team Area -->
+
+    
+
+    <!-- Start Team 
+    ============================================= -->
+    <div class="team-style-onea-rea default-padding-top pb-70 pb-xs-0 bg-contain-center bg-gray" style="background-image: url(assets/img/shape/18.png);" id="team">
+        <!-- <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <h4 class="sub-heading">Team Members</h4>
+                        <h2 class="title">Expert Team</h2>
+                        <div class="devider"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="row justify-content-center team-mb-30">
+                <!-- Single Item -->
+                @foreach ($team3 as $data )
+                    
+                <div class="col-xl-3 col-md-6">
+                    <div class="team-style-one">
+                        <div class="thumb">
+                            <img src="{{ asset('admin/teamImage/'.$data->image) }}" alt="Image Not Found">
+                        </div>
+                        <div class="info">
+                            <span>{{ $data->designation }}</span>
+                            <h4><a href="#">{{ $data->name }}</a></h4>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+                <!-- End Single Item -->
+           
+            </div>
+        </div>
+    </div>
+    <!-- End Team Area -->
+
+    
+@endsection

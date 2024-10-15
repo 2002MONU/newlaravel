@@ -1,0 +1,25 @@
+public function store(Request $request)
+{
+    // Validate the incoming request
+    $request->validate([
+        'status' => 'required|in:0,1',
+        'service' => 'required',
+        'question' => 'required|array',
+        'question.*' => 'required|string',
+        'answer' => 'required|array',
+        'answer.*' => 'required|string',
+    ]);
+
+    // Loop through each question and answer to save them as individual FAQs
+    foreach ($request->question as $key => $question) {
+        $faq = new Faq();
+        $faq->service_id = $request->service;
+        $faq->status = $request->status;
+        $faq->question = $question;
+        $faq->answer = $request->answer[$key];
+        $faq->save();
+    }
+
+    // Redirect back to the FAQ index with a success message
+    return redirect()->route('faqs.index')->with('success', 'Faq questions added successfully');
+}

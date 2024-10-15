@@ -1,0 +1,674 @@
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* page : about */
+    .breadcrumb-murtes .breadcrumb-content h2 {
+        font-size: 30px;
+        margin-top: -6px;
+    }
+    .breadcrumb-murtes .breadcrumb-content ul li {
+        font-size: 16px;
+    }
+    .breadcrumb-murtes .breadcrumb-content ul li a {
+        font-size: 16px;
+    }
+    .breadcrumb-murtes .breadcrumb-content {
+        margin-top: 0;
+        padding: 60px 0;
+    }
+    .about-details {
+        padding: 80px 0;
+    }
+    .about-page-about {
+        padding: 80px 0;
+    }
+    .about-page-about .part-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-page-about .part-img img {
+        display: none;
+    }
+    .about-page-about .part-img img.img-1 {
+        display: block;
+    }
+    .about-page-about .part-img {
+        padding: 0;
+        margin-top: 30px; 
+    }
+    .choosing-reason-about-page {
+        background: none;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+    .about-details .part-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-details .part-text h2.first-child {
+        margin-top: -5px;
+    }
+    /* page : blog details */
+    .sidebar {
+        margin-right: 0;
+    }
+    .blog-details .blog-details-area {
+        margin-left: 0;
+    }
+    .blog-details .blog-details-area .part-body .blog-head .date-meta {
+        display: none;
+    }
+    .blog-details .blog-details-area .part-body {
+        padding: 30px;
+    }
+    .blog-details .blog-details-area .part-body p.special {
+        font-size: 16px;
+        line-height: 28px;
+        padding: 15px;
+    }
+    .blog-details .blog-details-area .part-img {
+        margin-bottom: 30px;
+    }
+    .blog-details .blog-details-area .blog-bottom {
+        display: none;
+    }
+    .blog-details .releated-blog h2.title, .blog-details .blog-comment h2.title, .blog-details .comment-box h2.title {
+        font-size: 22px;
+    }
+    .blog-details {
+        padding: 80px 0;
+    }
+    /* page: case details */
+    .case-info .single-info .info-content .details {
+        padding-left: 0;
+    }
+    .case-info .single-info {
+        padding: 30px 0px;
+    }
+    .case-details .part-text h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .case-details .part-text .special-text-box {
+        padding: 30px;
+    }
+    .case-details .part-text h4 {
+        font-size: 20px;
+    }
+    .case-details {
+        padding-bottom: 80px;
+    }
+    .case-info {
+        padding-top: 80px;
+    }
+
+    /* page: case */
+    .case-page .case-menu .filterizr__controls li {
+        margin: 8px 15px;
+    }
+
+    /* contact */
+    .contact .contact-address .single-address {
+        display: block;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 40px 0;
+    }
+    .contact .contact-address .single-address .part-icon {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .contact .contact-address .single-address .part-icon span.title {
+        font-size: 30px;
+    }
+    .contact .contact-address .single-address .part-text p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .contact .contact-form h4 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .contact .contact-form form input {
+        height: 50px;
+    }
+    .contact #map {
+        margin-top: 40px;
+        height: 300px;
+    }
+    .contact {
+        padding: 80px 0 0;
+    }
+
+    /* faq */
+    .faq {
+        padding: 80px 0 35px;
+    }
+    .faq .single-faq h3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .faq-form .title-this-section h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .faq-form .title-this-section h2 br {
+        display: none;
+    }
+    .faq-form form input {
+        height: 50px;
+    }
+    .faq-form .title-this-section {
+        margin-bottom: 46px;
+    }
+    .faq-form form button {
+        height: 50px;
+        width: 100%;
+    }
+    .faq-form {
+        padding-bottom: 80px;
+    }
+
+    /* service details */
+    .service-service-page {
+        padding: 80px 0;
+    }
+    .service-service-page.service-details .service-details-area {
+        margin-left: 0;
+    }
+    .service-service-page.service-details .service-details-area .service-details-body {
+        padding: 30px 25px;
+    }
+    .service-service-page.service-details .service-details-area .service-details-body .part-text h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .choosing-reason-about-page .single-reason {
+        font-size: 18px;
+    }
+    .choosing-reason-about-page .single-reason h3 {
+        font-size: 20px;
+    }
+
+    /* page: service */
+    .service-service-page .part-text {
+        margin-left: 0;
+    }
+    .service-service-page .part-text {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+    .choosing-reason-service-page {
+        padding-bottom: 80px;
+    }
+    .service-service-page {
+        padding-bottom: 40px; 
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    /* page : about */
+    .breadcrumb-murtes .breadcrumb-content h2 {
+        font-size: 30px;
+        margin-top: -6px;
+    }
+    .breadcrumb-murtes .breadcrumb-content ul li {
+        font-size: 16px;
+    }
+    .breadcrumb-murtes .breadcrumb-content ul li a {
+        font-size: 16px;
+    }
+    .breadcrumb-murtes .breadcrumb-content {
+        margin-top: 0;
+        padding: 60px 0;
+    }
+    .about-details {
+        padding: 80px 0;
+    }
+    .about-page-about {
+        padding: 80px 0;
+    }
+    .about-page-about .part-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-page-about .part-img img {
+        display: none;
+    }
+    .about-page-about .part-img img.img-1 {
+        display: block;
+    }
+    .about-page-about .part-img {
+        padding: 0;
+        margin-top: 30px; 
+    }
+    .choosing-reason-about-page {
+        background: none;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+    .about-details .part-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-details .part-text h2.first-child {
+        margin-top: -5px;
+    }
+    /* page : blog details */
+    .sidebar {
+        margin-right: 0;
+    }
+    .blog-details .blog-details-area {
+        margin-left: 0;
+    }
+    .blog-details .blog-details-area .part-body .blog-head .date-meta {
+        display: none;
+    }
+    .blog-details .blog-details-area .part-body .blog-head h2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .blog-details .blog-details-area .part-body {
+        padding: 30px;
+    }
+    .blog-details .blog-details-area .part-body p.special {
+        font-size: 16px;
+        line-height: 28px;
+        padding: 15px;
+    }
+    .blog-details .blog-details-area .part-body .blog-video .play-video {
+        display: none;
+    }
+    .blog-details .blog-details-area .part-img {
+        margin-bottom: 30px;
+    }
+    .blog-details .blog-details-area .blog-bottom {
+        display: none;
+    }
+    .blog-details .releated-blog h2.title, .blog-details .blog-comment h2.title, .blog-details .comment-box h2.title {
+        font-size: 22px;
+    }
+    .blog-details .releated-blog .single-blog .part-details h4 {
+        font-size: 18px;
+    }
+    .blog-details .releated-blog .single-blog {
+        margin-bottom: 30px;
+    }
+    .blog-details .blog-comment .single-comment .part-img {
+        float: none;
+        margin-bottom: 20px;
+    }
+    .blog-details .blog-comment .single-comment.reply {
+        padding-left: 0;
+    }
+    .blog-details {
+        padding: 80px 0;
+    }
+
+    /* page: case details */
+    .case-info .single-info .info-content .details {
+        padding-left: 0;
+    }
+    .case-info .single-info {
+        padding: 30px 50px;
+        display: block;
+    }
+    .case-details .part-text h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .case-details .part-text .special-text-box {
+        padding: 30px;
+    }
+    .case-details .part-text h4 {
+        font-size: 20px;
+    }
+    .case-details {
+        padding-bottom: 80px;
+    }
+    .case-info {
+        padding-top: 80px;
+    }
+    /* page: case */
+    .case-page .case-menu .filterizr__controls li {
+        margin: 8px 15px;
+    }
+
+    /* contact */
+    .contact .contact-address .single-address {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    /* .contact .contact-address .single-address .part-icon {
+        margin-right: 0;
+    } */
+    /* .contact .contact-address .single-address .part-icon span.title {
+        font-size: 26px;
+    }
+    .contact .contact-address .single-address .part-icon img {
+        height: 40px;
+    }
+    .contact .contact-address .single-address .part-text p {
+        font-size: 16px;
+        line-height: 25px;
+    } */
+    .contact .contact-form h4 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .contact .contact-form form input {
+        height: 50px;
+    }
+    button.btn-murtes-6 {
+        height: 50px;
+    }
+    .contact #map {
+        margin-top: 40px;
+        height: 300px;
+    }
+    .contact {
+        padding: 80px 0 0;
+    }
+    /* faq */
+    .faq {
+        padding: 80px 0 35px;
+    }
+    .faq .single-faq h3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .faq-form .title-this-section h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .faq-form .title-this-section h2 br {
+        display: none;
+    }
+    .faq-form form input {
+        height: 50px;
+    }
+    .faq-form .title-this-section {
+        margin-bottom: 46px;
+    }
+    .faq-form form button {
+        height: 50px;
+        width: 100%;
+    }
+    .faq-form {
+        padding-bottom: 80px;
+    }
+
+    /* service details */
+    .service-service-page {
+        padding: 80px 0;
+    }
+    .service-service-page.service-details .service-details-area {
+        margin-left: 0;
+    }
+    .service-service-page.service-details .service-details-area .service-details-body {
+        padding: 30px 25px;
+    }
+    .service-service-page.service-details .service-details-area .service-details-body .part-text h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .choosing-reason-about-page .single-reason {
+        font-size: 18px;
+    }
+    .choosing-reason-about-page .single-reason h3 {
+        font-size: 20px;
+    }
+
+    /* page: service */
+    .service-service-page .part-text {
+        margin-left: 0;
+    }
+    .service-service-page .part-text {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+    .choosing-reason-service-page {
+        padding-bottom: 80px;
+    }
+    .service-service-page {
+        padding-bottom: 40px; 
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 575px) {
+    /* page : about */
+    .breadcrumb-murtes .breadcrumb-content h2 {
+        font-size: 30px;
+        margin-top: -6px;
+    }
+    .breadcrumb-murtes .breadcrumb-content ul li {
+        font-size: 16px;
+    }
+    .breadcrumb-murtes .breadcrumb-content ul li a {
+        font-size: 16px;
+    }
+    .breadcrumb-murtes .breadcrumb-content {
+        margin-top: 0;
+        padding: 60px 0;
+    }
+    .about-details {
+        padding: 80px 0;
+    }
+    .about-page-about {
+        padding: 80px 0;
+    }
+    .about-page-about .part-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-page-about .part-img img {
+        display: none;
+    }
+    .about-page-about .part-img img.img-1 {
+        display: block;
+    }
+    .about-page-about .part-img {
+        padding: 0;
+        margin-top: 30px; 
+    }
+    .choosing-reason-about-page {
+        background: none;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+    .about-details .part-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-details .part-text h2.first-child {
+        margin-top: -5px;
+    }
+    /* page : blog details */
+    .sidebar {
+        margin-right: 0;
+    }
+    .blog-details .blog-details-area {
+        margin-left: 0;
+    }
+    .blog-details .blog-details-area .part-body .blog-head .date-meta {
+        display: none;
+    }
+    .blog-details .blog-details-area .part-body .blog-head h2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .blog-details .blog-details-area .part-body {
+        padding: 30px;
+    }
+    .blog-details .blog-details-area .part-body p.special {
+        font-size: 16px;
+        line-height: 28px;
+        padding: 15px;
+    }
+    .blog-details .blog-details-area .part-body .blog-video .play-video {
+        display: none;
+    }
+    .blog-details .blog-details-area .part-img {
+        margin-bottom: 30px;
+    }
+    .blog-details .blog-details-area .blog-bottom {
+        display: none;
+    }
+    .blog-details .releated-blog h2.title, .blog-details .blog-comment h2.title, .blog-details .comment-box h2.title {
+        font-size: 22px;
+    }
+    .blog-details .releated-blog .single-blog .part-details h4 {
+        font-size: 18px;
+    }
+    .blog-details .releated-blog .single-blog {
+        margin-bottom: 30px;
+    }
+    .blog-details .blog-comment .single-comment .part-img {
+        float: none;
+        margin-bottom: 20px;
+    }
+    .blog-details .blog-comment .single-comment.reply {
+        padding-left: 0;
+    }
+    .blog-details {
+        padding: 80px 0;
+    }
+    /* page: case details */
+    .case-info .single-info .info-content .details {
+        padding-left: 0;
+    }
+    .case-info .single-info {
+        padding: 30px 50px;
+        display: block;
+    }
+    .case-details .part-text h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .case-details .part-text .special-text-box {
+        padding: 30px;
+    }
+    .case-details .part-text h4 {
+        font-size: 20px;
+    }
+    .case-details {
+        padding-bottom: 80px;
+    }
+    .case-info {
+        padding-top: 80px;
+    }
+
+    /* page: case */
+    .case-page .case-menu .filterizr__controls li {
+        margin: 8px 15px;
+    }
+
+    /* contact */
+    .contact .contact-address .single-address {
+        display: block;
+        padding: 0;
+        text-align: center;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+    }
+    .contact .contact-address .single-address .part-icon {
+        margin-right: 0;
+    }
+    .contact .contact-address .single-address .part-icon span.title {
+        font-size: 26px;
+    }
+    .contact .contact-address .single-address .part-icon img {
+        height: 40px;
+    }
+    .contact .contact-address .single-address .part-text p {
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .contact .contact-form h4 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .contact .contact-form form input {
+        height: 50px;
+    }
+    button.btn-murtes-6 {
+        height: 50px;
+    }
+    .contact #map {
+        margin-top: 40px;
+        height: 300px;
+    }
+    .contact {
+        padding: 80px 0 0;
+    }
+
+    /* faq */
+    .faq {
+        padding: 80px 0 35px;
+    }
+    .faq .single-faq h3 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .faq-form .title-this-section h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .faq-form .title-this-section h2 br {
+        display: none;
+    }
+    .faq-form form input {
+        height: 50px;
+    }
+    .faq-form .title-this-section {
+        margin-bottom: 46px;
+    }
+    .faq-form form button {
+        height: 50px;
+        width: 100%;
+    }
+    .faq-form {
+        padding-bottom: 80px;
+    }
+
+    /* service details */
+    .service-service-page {
+        padding: 80px 0;
+    }
+    .service-service-page.service-details .service-details-area {
+        margin-left: 0;
+    }
+    .service-service-page.service-details .service-details-area .service-details-body {
+        padding: 30px 25px;
+    }
+    .service-service-page.service-details .service-details-area .service-details-body .part-text h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .choosing-reason-about-page .single-reason {
+        font-size: 18px;
+    }
+    .choosing-reason-about-page .single-reason h3 {
+        font-size: 20px;
+    }
+    .service-service-page.service-details .service-details-area .service-details-body .part-video {
+        display: none;
+    }
+
+    /* page: service */
+    .service-service-page .part-text {
+        margin-left: 0;
+    }
+    .service-service-page .part-text {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+    .choosing-reason-service-page {
+        padding-bottom: 80px;
+    }
+    .service-service-page {
+        padding-bottom: 40px; 
+    }
+}

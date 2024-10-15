@@ -1,0 +1,14 @@
+username = vijayahospitalvzm_admin
+
+password = vizag@123@abc
+
+database = vijayahospitalvzm
+
+
+
+new username = 
+
+new password =
+
+
+new database = vijayahospitalvzm-313930d420

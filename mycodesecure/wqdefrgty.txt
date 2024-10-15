@@ -1,0 +1,4 @@
+|dimensions:max_width=3000,max_height=1200,'
+            . 'min_width=1200,min_height:700
+
+<span> ( Note:IMG TYPE:- JPEG,PNG,JPG,SIZE:2MB,Min_Dim-1200X700,Max_Dim-3000X1200)</span>

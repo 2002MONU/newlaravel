@@ -1,0 +1,41 @@
+ $details = $request->validate([
+        'user_name' => 'required|string', 
+        'phone_no' => 'required|numeric|digits:10', 
+        'subject' => 'nullable|string', 
+        'message' => 'required|string', 
+        'email' => 'required|email', 
+    ]);
+
+    // Create a new EnquiryForm instance and save the details
+    $enquiry = new EnquiryForm();
+    $enquiry->user_name = $details['user_name'];
+    $enquiry->phone_no = $details['phone_no'];
+    $enquiry->subject = $details['subject'];
+    $enquiry->message = $details['message'];
+    $enquiry->email = $details['email'];
+    $enquiry->save();
+
+    try {
+        // Send an email to the user
+        Mail::to($details['email'])->send(new \App\Mail\Usermail($details));
+
+        // Prepare admin email details
+        $adminEmail = 'vanaresortaraku@gmail.com';
+        $adminDetails = [
+            'user_name' => $details['user_name'],
+            'phone_no' => $details['phone_no'],
+            'subject' => $details['subject'],
+            'message' => $details['message'],
+            'email' => $details['email'],
+        ];
+
+        // Send an email to the admin
+        Mail::to($adminEmail)->send(new \App\Mail\Adminmail($adminDetails));
+
+        return redirect()->back()->with('success', 'Enquiry form submitted successfully');
+    } catch (\Exception $e) {
+        // Log the error message
+        \Log::error('Mail sending failed: ' . $e->getMessage());
+
+        return redirect()->back()->with('error', 'There was an error submitting the enquiry form. Please try again later.');
+    }

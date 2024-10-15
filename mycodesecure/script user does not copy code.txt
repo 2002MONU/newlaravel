@@ -1,0 +1,43 @@
+<style>
+         body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+<!--<script>
+        // Disable right-click context menu
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable common copy keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Disable Ctrl+C, Ctrl+X, Ctrl+S, Ctrl+U, etc.
+            if ((e.ctrlKey || e.metaKey) && 
+                (e.key === 'c' || e.key === 'x' || e.key === 's' || e.key === 'u' || e.key === 'p' || e.key === 'a')) {
+                e.preventDefault();
+            }
+            // Disable F12 for Developer Tools
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+        });
+
+        // Disable drag-and-drop for text/images
+        document.addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Disable copy, cut, and paste from the context menu
+        document.addEventListener('copy', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('cut', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('paste', function(e) {
+            e.preventDefault();
+        });
+    </script>-->

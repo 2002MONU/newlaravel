@@ -1,0 +1,71 @@
+use Illuminate\Http\Request;
+
+public function showContactForm()
+{
+    // Generate a random alphanumeric CAPTCHA code
+    $captcha = $this->generateRandomCaptcha();
+
+    // Store the CAPTCHA code in the session
+    session(['captcha' => $captcha]);
+
+    return view('contact.form', compact('captcha'));
+}
+
+public function submitContactForm(Request $request)
+{
+    // Validate the CAPTCHA code
+    $request->validate([
+        'captcha' => 'required|alpha_num|size:6', // Validate the CAPTCHA input field
+    ]);
+
+    // Retrieve the CAPTCHA code from the session
+    $captcha = session('captcha');
+
+    // Validate the submitted CAPTCHA code
+    if (strtolower($request->input('captcha')) === strtolower($captcha)) {
+        // CAPTCHA code is correct, process the form submission
+        // Your code to handle the form submission goes here
+    } else {
+        // CAPTCHA code is incorrect, redirect back with error message
+        return back()->withErrors(['captcha' => 'Invalid CAPTCHA code. Please try again.']);
+    }
+}
+
+private function generateRandomCaptcha($length = 6)
+{
+    // Generate a random alphanumeric CAPTCHA code
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $captcha = '';
+    $max = strlen($characters) - 1;
+
+    for ($i = 0; $i < $length; $i++) {
+        $captcha .= $characters[rand(0, $max)];
+    }
+
+    return $captcha;
+}
+
+
+<form method="POST" action="{{ route('submit.contact.form') }}">
+    @csrf
+    <!-- Display the CAPTCHA code -->
+    <label for="captcha">CAPTCHA Code: {{ $captcha }}</label>
+    <!-- Input field for the user to enter the CAPTCHA code -->
+    <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA code">
+    <!-- Display validation errors -->
+    @error('captcha')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+    <!-- Refresh CAPTCHA button -->
+    <button type="button" id="refresh-captcha">Refresh CAPTCHA</button>
+    <!-- Submit button -->
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    // JavaScript for refreshing CAPTCHA
+    document.getElementById('refresh-captcha').addEventListener('click', function () {
+        // Reload the page to generate a new CAPTCHA
+        location.reload();
+    });
+</script>

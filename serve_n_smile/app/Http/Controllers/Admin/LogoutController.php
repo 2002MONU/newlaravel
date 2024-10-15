@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class LogoutController extends Controller
+{
+    // // admin logout 
+    public function logout(){
+        if(auth()->guard('admin')->check()){
+            Auth::guard('admin')->logout();
+        }
+        return redirect()->route('admin.login')->with('success','You are Logout successfully');
+    }
+}

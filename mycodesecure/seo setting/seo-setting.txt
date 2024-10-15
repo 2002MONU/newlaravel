@@ -1,0 +1,12 @@
+@php
+    $settings = \App\GeneralSettings::where('id', 1)->first();
+    $path = request()->path();
+    $seo_details = \App\SeoSettings::where('page_name', $path)->first();
+    $title = $description = $keywords = '';
+    if ($seo_details != '') {
+        $title = $seo_details->title;
+        $description = $seo_details->description;
+        $keywords = $seo_details->keywords;
+    }
+
+@endphp

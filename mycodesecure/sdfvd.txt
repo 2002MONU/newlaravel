@@ -1,0 +1,20 @@
+paint , multi locking system, ss304 steel sill, concealed hinges, inside baby
+ concealed tower bolt with elegant handle with complete 5 years warranty .
+
+
+<!--                        <tr>
+                            <td>{{ $about->id }}</td>
+                           
+                           <td><a href="{{asset('assets/dynamics/about/'.$about->image_01)}}" target="_blank"><img src="{{asset('assets/dynamics/about/'.$about->image_01)}}" style="width:80px;height:80px;"></a></td>
+                            
+                            <td><a href="{{asset('assets/dynamics/about/'.$about->image_02)}}" target="_blank"><img src="{{asset('assets/dynamics/about/'.$about->image_02)}}" style="width:80px;height:80px;"></a></td>
+                            
+                            <td>
+                                <div class="d-inline-flex gap-1">
+                                    <a href="{{ route('aboutpages.edit', ['aboutpage' => $about->id]) }}" class="btn btn-outline-success btn-sm">
+                                        <i class="ri-edit-box-line"></i>
+                                    </a>
+                                    
+                                </div>
+                            </td>
+                        </tr>-->

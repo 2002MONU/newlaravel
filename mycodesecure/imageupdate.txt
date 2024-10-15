@@ -1,0 +1,53 @@
+public function updatefeature(Request $request, $id)
+{
+    $request->validate([
+        'title' => 'required|max:20',
+        'heading' => 'required|max:40',
+        'paragraph' => 'required|max:300',
+        'point1' => 'max:80',
+        'point2' => 'max:80',
+        'point3' => 'max:80',
+        'point4' => 'max:80',
+        'image' => 'mimes:jpeg,png,jpg|max:1024|dimensions:min_width=450,min_height=450,max_width=600,max_height=600', // Corrected the capitalization of Max_height
+    ]);
+
+    $servicefeature = ServiceFeature::find($id);
+
+    // Check if a new image is uploaded
+    if ($request->hasFile('image')) {
+        // Validate and upload the new image
+        $filename = $request->file('image');
+        $imagename1 = $filename->getClientOriginalName();
+        $filename->move('website-images/servicepage', $imagename1);
+        
+        // Delete the old image
+        $oldImagePath = public_path('website-images/servicepage/' . $servicefeature->image);
+        if (file_exists($oldImagePath)) {
+            unlink($oldImagePath);
+        }
+
+        // Update the service feature with the new image path
+        $servicefeature->image = $imagename1;
+    }
+
+    // Update other fields
+    $servicefeature->title = $request->title;
+    $servicefeature->heading = $request->heading;
+    $servicefeature->paragraph = $request->paragraph;
+    $servicefeature->point1 = $request->point1;
+    $servicefeature->point2 = $request->point2;
+    $servicefeature->point3 = $request->point3;
+    $servicefeature->point4 = $request->point4;
+    $servicefeature->status = $request->status;
+    $servicefeature->link = $request->link;
+
+    // Save the updated service feature
+    $servicefeature->save();
+
+    return redirect('servicefeatures')->with('success', 'Service Features Updated Successfully');
+}
+
+
+
+
+dimensions:min_width=700,min_height=600,max_width=2500,max_height=1200

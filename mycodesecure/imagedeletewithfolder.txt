@@ -1,0 +1,33 @@
+
+    public function servicedelete($id){
+        $image = Service::where('id', $id)->first();
+        if ($image) {
+            // Get the path of the images in the public folder
+            $imagePath1 = public_path('website-images/serviceimages/' . $image->image);
+            $imagePath2 = public_path('website-images/serviceimages/' . $image->logoimage);
+        
+            // Check if the files exist before attempting deletion
+            if (file_exists($imagePath1)) {
+                // Delete the first image
+                unlink($imagePath1);
+            }
+            if (file_exists($imagePath2)) {
+                // Delete the second image
+                unlink($imagePath2);
+            }
+        
+            // Remove the directory if it's empty after deleting the images
+            // $imageDirectory = dirname($imagePath1); // Using $imagePath1 for the directory path
+            // if (is_dir($imageDirectory) && count(scandir($imageDirectory)) == 2) {
+            //     rmdir($imageDirectory); // Delete the directory if it's empty
+            // }
+        
+            // Delete the record from the database
+            $image->delete();
+            
+            return redirect()->back()->with('success', 'Images and associated record deleted successfully.');
+        } else {
+            return redirect()->back()->with('error', 'Image record not found.');
+        }
+       
+    }

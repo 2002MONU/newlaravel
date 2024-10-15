@@ -1,0 +1,38 @@
+ $currentBlog = Blog::where('status', 1)->where('slug', $slug)->first();
+
+            $previousBlog = Blog::where('status', 1)
+            ->where('id', '<', $currentBlog->id)
+            ->orderBy('id', 'desc')
+            ->first();
+
+            $nextBlog = Blog::where('status', 1)
+                ->where('id', '>', $currentBlog->id)
+                ->orderBy('id', 'asc')
+                ->first();
+
+  <div class="action-area">
+    @if($previousBlog)
+        <a href="{{ route('home.blog-details', $previousBlog->slug) }}" class="btn-fill-previous bg-accent btn-slide-hover text-primarytext mr-50">
+            <i class="fas fa-angle-left"></i> Previous
+        </a>
+    @else
+        <!-- Optionally, you can display a disabled button or nothing -->
+        <a class="btn-fill-previous bg-accent btn-slide-hover text-primarytext mr-50 disabled">
+            <i class="fas fa-angle-left"></i> Previous
+        </a>
+    @endif
+</div>
+
+<div class="action-area">
+    @if($nextBlog)
+        <a href="{{ route('home.blog-details', $nextBlog->slug) }}" class="btn-fill-next bg-accent btn-slide-hover text-primarytext">
+            Next <i class="fas fa-angle-right"></i>
+        </a>
+    @else
+        <!-- Optionally, you can display a disabled button or nothing -->
+        <a class="btn-fill-next bg-accent btn-slide-hover text-primarytext disabled">
+            Next <i class="fas fa-angle-right"></i>
+        </a>
+    @endif
+</div>
+

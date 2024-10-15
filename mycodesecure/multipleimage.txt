@@ -1,0 +1,12 @@
+$imageNames = []; // Initialize an array to hold image names
+    if ($request->hasfile('images')) {
+        foreach ($request->file('images') as $image) {
+            // Generate a unique name for each image
+            $name = time() . '_' . uniqid() . '.' . $image->getClientOriginalExtension();
+            // Move the image to the public folder
+            $image->move(public_path('website/doortype'), $name);
+            // Store each image name in the array
+            $imageNames[] = $name;
+        }
+       $catdetails->images = json_encode($imageNames);
+    }

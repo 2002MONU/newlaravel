@@ -1,0 +1,63 @@
+namespace App\Listeners;
+
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Auth\Events\Login;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+
+class AdminLog
+{
+    protected $request;
+
+    /**
+     * Create the event listener.
+     *
+     * @return void
+     */
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
+
+    /**
+     * Handle the event.
+     *
+     * @param  object  $event
+     * @return void
+     */
+    public function handle($event)
+    {
+        // List of authorized admin emails
+        $authorizedAdmins = [
+            'authorized1@example.com',
+            'authorized2@example.com',
+            // Add other authorized admin emails here
+        ];
+
+        // Get the email of the logged-in user
+        $userEmail = $event->user->email;
+
+        // Check if the logged-in user is an admin
+        if ($event->user->isAdmin()) {
+            // Log the login attempt
+            DB::table('admin_logs')->insert([
+                'admin_email' => $userEmail,
+                'ip_address' => $this->request->ip(),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
+
+            // Check if the admin email is not in the authorized list
+            if (!in_array($userEmail, $authorizedAdmins)) {
+                // Log an unauthorized access attempt
+                Log::warning('Unauthorized admin login attempt', [
+                    'email' => $userEmail,
+                    'ip_address' => $this->request->ip(),
+                    'timestamp' => now(),
+                ]);
+            }
+        }
+    }
+}

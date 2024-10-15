@@ -1,0 +1,27 @@
+[18-Nov-2020 07:19:55 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:19:55 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:19:55 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/alt/php70/usr/share/pear') in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:19:55 UTC] PHP Notice:  Undefined variable: cofingmode in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 13
+[18-Nov-2020 07:19:55 UTC] PHP Notice:  Undefined variable: appId in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 15
+[18-Nov-2020 07:19:55 UTC] PHP Notice:  Undefined variable: base_url in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 24
+[18-Nov-2020 07:19:55 UTC] PHP Notice:  Undefined variable: base_url in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 25
+[18-Nov-2020 07:19:55 UTC] PHP Notice:  Undefined variable: app_name in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 26
+[18-Nov-2020 07:19:55 UTC] PHP Notice:  Undefined variable: secretKey in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 34
+[18-Nov-2020 07:20:24 UTC] PHP Warning:  include(./config.php): failed to open stream: No such file or directory in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:20:24 UTC] PHP Warning:  include(./config.php): failed to open stream: No such file or directory in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:20:24 UTC] PHP Warning:  include(): Failed opening './config.php' for inclusion (include_path='.:/opt/alt/php70/usr/share/pear') in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:20:24 UTC] PHP Notice:  Undefined variable: cofingmode in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 13
+[18-Nov-2020 07:20:24 UTC] PHP Notice:  Undefined variable: appId in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 15
+[18-Nov-2020 07:20:24 UTC] PHP Notice:  Undefined variable: base_url in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 24
+[18-Nov-2020 07:20:24 UTC] PHP Notice:  Undefined variable: base_url in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 25
+[18-Nov-2020 07:20:24 UTC] PHP Notice:  Undefined variable: app_name in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 26
+[18-Nov-2020 07:20:24 UTC] PHP Notice:  Undefined variable: secretKey in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 34
+[18-Nov-2020 07:20:37 UTC] PHP Warning:  include(./config.php): failed to open stream: No such file or directory in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:20:37 UTC] PHP Warning:  include(./config.php): failed to open stream: No such file or directory in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:20:37 UTC] PHP Warning:  include(): Failed opening './config.php' for inclusion (include_path='.:/opt/alt/php70/usr/share/pear') in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 12
+[18-Nov-2020 07:20:37 UTC] PHP Notice:  Undefined variable: cofingmode in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 13
+[18-Nov-2020 07:20:37 UTC] PHP Notice:  Undefined variable: appId in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 15
+[18-Nov-2020 07:20:37 UTC] PHP Notice:  Undefined variable: base_url in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 24
+[18-Nov-2020 07:20:37 UTC] PHP Notice:  Undefined variable: base_url in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 25
+[18-Nov-2020 07:20:37 UTC] PHP Notice:  Undefined variable: app_name in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 26
+[18-Nov-2020 07:20:37 UTC] PHP Notice:  Undefined variable: secretKey in /home2/demowork/public_html/php/oneto11/api/checkout/cashfree.php on line 34

@@ -1,0 +1,4 @@
+$category =  DB::table('door_categories')
+            ->select('door_categories.id','door_categories.slug','door_category_details.image1','door_category_details.image2','door_category_details.image2','door_category_details.image3','door_category_details.image4','door_category_details.image5','door_category_details.title','door_category_details.doorbrand','door_category_details.description','door_category_details.doormodel','door_category_details.price','door_category_details.saleprice','door_category_details.paragraph','door_category_details.moredetails','door_category_details.color','door_category_details.woodtype','door_category_details.prodimension','door_category_details.status')
+            ->join('door_category_details','door_categories.id','=','door_category_details.city_id')
+            ->where('door_category_details.slug',$slug)->first(); 

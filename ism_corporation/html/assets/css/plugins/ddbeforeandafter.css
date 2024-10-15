@@ -1,0 +1,130 @@
+div.beforeandafter{ /* main container */
+	
+	display: block;
+	height: 434px; /* default height of main container */
+	overflow: hidden;
+	position: relative; 
+	width: 650px; /* default width of main container */
+}
+
+div.beforeandafter img{
+	max-width: none !important;
+}
+
+div.before1, div.after1{ /* before and after DIVs within main container */
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	transition: width 0.4s ease-in-out; /* CSS transition. Actual duration set inside script (options.revealduration) */
+	width: 100%;
+	z-index: 7;
+}
+
+div.after1{
+	z-index: 1; /* z-index of after div should be smaller than before's */
+}
+
+
+div.drag{ /* main div used for separating and dragging between before and after slides */
+	background: white;
+	cursor: col-resize;
+	display: block;
+	height: 100%;
+	left: 100%;
+	position: absolute;
+	top: 0;
+	transition: left 0.4s ease-in-out; /* transition. 0.4s sets duration of drag fade in time */
+	width: 2px; /* width of drag bar separator */
+	z-index: 7;
+}
+
+div.drag div.draghandle {
+	background: #ea622b;
+	height: 50px;
+	position: absolute;
+	text-align: center;
+	width: 50px;
+	top: 50% !important;
+	transform: translateY(-50%) translateX(-50%);
+	border-radius: 100%;
+	left: 50% !important;
+    
+}
+
+div.drag div.draghandle::after, 
+div.drag div.draghandle::before {
+	border-left: 2px solid;
+	border-top: 2px solid;
+	content: "";
+	height: 10px;
+	position: absolute;
+	top: 50%;
+	transform-origin: 0 0;
+	width: 10px;
+    color: #fff;
+    z-index: 999;
+}
+div.drag div.draghandle::before {
+	left: 8px;
+	transform: rotate(-45deg);
+}
+div.drag div.draghandle::after {
+	right: -2px;
+	transform: rotate(135deg);
+}
+
+
+
+.beforeandafter-style div.before1 span.caption, .beforeandafter-style div.after1 span.caption{	
+	bottom: 10px;	
+	display: block;	
+	position: absolute;
+	right: 10px;	
+	text-align: center;	
+}
+
+.label-top div.before1 span.caption, .label-top div.after1 span.caption{
+	top: 10px;	
+	display: block;	
+	position: absolute;
+	right: 10px;	
+	text-align: center;	
+}
+div.image-width-height {
+	width: 100%;	
+	height: 600px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    div.image-width-height {
+        height: 499px !important;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    div.image-width-height {
+        height: 370px !important;
+    }
+}
+@media only screen and (max-width: 767px) {
+    div.image-width-height {
+        height: 167px !important;
+    }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    div.image-width-height {
+        height: 274px !important;
+    }
+}
+.image-width-height span.caption{
+	color: #fff;
+	background:#ea622b;
+	width: 90px;
+    padding: 2px 2px 0;
+    border-radius: 4px;
+}
+
+div.before1 span.caption{
+	left: 10px;
+	right: auto;
+}

@@ -1,0 +1,13 @@
+   $gallery = Gallery::find($id);
+             if($request->hasFile('image')){
+                $filename = $request->file('image');
+                $image = $filename->getClientOriginalName();
+                $filename->move('website/gallery',$image);
+                    // Delete the old image
+            $oldImagePath2 = public_path('website/gallery/' . $gallery->image);
+            if (file_exists($oldImagePath2)) {
+                unlink($oldImagePath2);
+            }
+                $gallery->image = $image;
+                $gallery->save();
+             }

@@ -1,0 +1,7 @@
+<script>
+            var msg = '{{Session::get('success')}}';
+            var exist = '{{Session::has('success')}}';
+            if(exist){
+              alert(msg);
+            }
+          </script>

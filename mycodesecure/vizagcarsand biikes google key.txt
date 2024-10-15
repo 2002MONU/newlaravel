@@ -1,0 +1,3 @@
+google site key - 6LdorkwqAAAAAAbCJn7VuEHGO3qnJW4zvqnHC56i
+
+google secret key = 6LdorkwqAAAAAEWXo2eh1XQiw9Cs0mgqB9Mkda_U

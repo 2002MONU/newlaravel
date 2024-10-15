@@ -1,0 +1,59 @@
+   if($request->hasFile('image1')){
+             $file1 = $request->file('image1')->getClientOriginalExtension();
+             $filename1 = time().'.'.$file1;
+             $filepath1 = $request->file('image1')->move(public_path('website/doortype'),$filename1);
+             $oldImagePath1 = public_path('website/doortype/' . $catdeatils->image1);
+             if (file_exists($oldImagePath1)) {
+                 unlink($oldImagePath1);
+             }
+             $catdeatils->image1 = $filename1;
+ 
+         }
+              /// image 2
+              if($request->hasFile('image2')){
+             $file2 = $request->file('image2')->getClientOriginalExtension();
+             $filename2 = time().'.'.$file2;
+             $filepath2 = $request->file('image2')->move(public_path('website/doortype'),$filename2);
+             $oldImagePath2 = public_path('website/doortype/' . $catdeatils->image2);
+             if (file_exists($oldImagePath2)) {
+                 unlink($oldImagePath2);
+             }
+             $catdeatils->image2 = $filename2;
+             
+         }
+             // image 3
+             if($request->hasFile('image3')){
+             $file3 = $request->file('image3')->getClientOriginalExtension();
+             $filename3 = time().'.'.$file3;
+             $filepath3 = $request->file('image3')->move(public_path('website/doortype'),$filename3);
+             $oldImagePath3 = public_path('website/doortype/' . $catdeatils->image3);
+             if (file_exists($oldImagePath3)) {
+                 unlink($oldImagePath3);
+             }
+             $catdeatils->image3 = $filename3;
+            
+         }   
+             // image 4
+             if($request->hasFile('image4')){
+             $file4 = $request->file('image4')->getClientOriginalExtension();
+             $filename4 = time().'.'.$file4;
+             $filepath4 = $request->file('image4')->move(public_path('website/doortype'),$filename4);
+             $oldImagePath4 = public_path('website/doortype/' . $catdeatils->image4);
+             if (file_exists($oldImagePath4)) {
+                 unlink($oldImagePath4);
+             }
+             $catdeatils->image4 = $filename4;
+            
+         }    
+             // image 5 
+             if($request->hasFile('image5')){
+             $file5 = $request->file('image5')->getClientOriginalExtension();
+             $filename5 = time().'.'.$file5;
+             $filepath5 = $request->file('image5')->move(public_path('website/doortype'),$filename5);
+             $oldImagePath5 = public_path('website/doortype/' . $catdeatils->image5);
+             if (file_exists($oldImagePath5)) {
+                 unlink($oldImagePath5);
+             }
+             $catdeatils->image5 = $filename5;
+            
+         }

@@ -1,0 +1,25 @@
+$request->validate([
+    'email' => 'required|string|email',
+    'password' => 'required|string',
+], [
+    'email.required' => 'The email field is required.',
+    'email.email' => 'The email must be a valid email address.',
+    'password.required' => 'The password field is required.',
+]);
+
+$credentials = $request->only('email', 'password');
+
+if (auth()->guard('admin')->attempt($credentials)) {
+    return redirect('admin/dashboard')->with('success', 'You are logged in successfully.');
+} else {
+    // Check if the email exists in the database
+    $emailExists = \App\Models\Admin::where('email', $request->input('email'))->exists();
+
+    if ($emailExists) {
+        // Email is correct, so the password must be wrong
+        return back()->withErrors(['password' => 'Invalid password.']);
+    } else {
+        // Email is wrong
+        return back()->withErrors(['email' => 'Invalid email.']);
+    }
+}

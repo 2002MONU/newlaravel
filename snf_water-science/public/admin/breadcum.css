@@ -1,0 +1,38 @@
+.page-title-box .page-title-right {
+    float: right;
+    margin-top: 20px; }
+    @media (max-width: 640px) {
+    .page-title-box .page-title-right {
+      display: none; } }
+      .page-title-box .page-title {
+    font-size: 16px;
+    margin: 0;
+    line-height: 75px;
+    color: #323a46;
+    text-transform: uppercase;
+    font-weight: 600; }
+  
+  .page-title-box .page-title-right {
+    float: right;
+    margin-top: 20px; }
+  
+  .page-title-box .breadcrumb {
+    padding-top: 8px; }
+  
+  @media (max-width: 767.98px) {
+    .page-title-box .page-title {
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 70px; }
+    .page-title-box .breadcrumb {
+      display: none; } }
+  
+  @media (max-width: 640px) {
+    .page-title-box .page-title-right {
+      display: none; } }
+  
+  @media (max-width: 419px) {
+    .page-title-box .breadcrumb {
+      display: none; } }

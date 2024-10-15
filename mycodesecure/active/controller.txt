@@ -1,0 +1,27 @@
+use App\Models\YourModel;
+use Illuminate\Http\Request;
+
+class YourController extends Controller
+{
+    public function index(Request $request)
+    {
+        $status = $request->input('status', 'active'); // Default to active
+
+        if ($status == 'inactive') {
+            $items = YourModel::inactive()->get();
+        } else {
+            $items = YourModel::active()->get();
+        }
+
+        return view('your_view', compact('items', 'status'));
+    }
+
+    public function changeStatus($id)
+    {
+        $item = YourModel::find($id);
+        $item->status = !$item->status; // Toggle status
+        $item->save();
+
+        return redirect()->back();
+    }
+}

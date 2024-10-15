@@ -1,0 +1,36 @@
+<script>
+    function validatePhoneNumber() {
+    var phoneNumber = document.getElementById('phoneNumber').value;
+    var phoneError = document.getElementById('phoneError');
+
+    // Check if the input is a number
+    if (isNaN(phoneNumber)) {
+        phoneError.textContent = "Please enter numbers only.";
+        return;
+    }
+
+    // Check if the input length is between 10 and 12
+    if (phoneNumber.length < 10 || phoneNumber.length > 12) {
+        phoneError.textContent = "Phone number should be between 10 and 12 digits.";
+        return;
+    }
+
+    // If all conditions are met, clear any existing error message
+    phoneError.textContent = "";
+}
+
+
+document.getElementById('email').addEventListener('input', function(event) {
+            var emailInput = event.target.value.trim(); // Trim whitespace from the email
+            
+            // Regular expression to validate email format
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            // Check if the email is empty or doesn't match the regex pattern
+            if (emailInput !== '' && !emailRegex.test(emailInput)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid Gmail address.';
+            } else {
+                document.getElementById('emailError').textContent = '';
+            }
+        });
+  </script>

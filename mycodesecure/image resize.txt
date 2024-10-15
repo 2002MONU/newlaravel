@@ -1,0 +1,58 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Validator;
+use Spatie\ImageOptimizer\OptimizerChainFactory;
+use Spatie\ImageOptimizer\Optimizers\Jpegoptim;
+use Spatie\ImageOptimizer\Optimizers\Pngquant;
+use Spatie\ImageOptimizer\Optimizers\Gifsicle;
+use Spatie\ImageOptimizer\Optimizers\Svgo;
+use Intervention\Image\Facades\Image;
+
+use Exception;
+
+class CompressController extends Controller
+{
+    public function index(){
+        return view('image-optimizer');
+    }
+
+    public function compress(Request $request)
+    {
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'image' => 'required|file|mimes:jpeg,jpg,png,gif,svg,webp|max:5120',
+            ]
+        );
+    
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
+    
+        try {
+            $image = $request->file('image');
+            $imagename = time().'.'.$image->getClientOriginalExtension();
+            $imagepath = public_path('/images/');
+    
+            // Resize the image before saving
+            $resizedImage = Image::make($image->getRealPath());
+            $resizedImage->resize(800, 600, function ($constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            })->save($imagepath.$imagename);
+    
+            // Use Spatie Image Optimizer to further compress the image
+            $optimizerChain = OptimizerChainFactory::create();
+            $optimizerChain->optimize($imagepath . $imagename);
+    
+            return back()->with('success', 'Image compressed successfully.');
+        } catch (Exception $e) {
+            return redirect()->back()->with('error', 'Oops! Something went wrong. Please try again later.')->withInput();
+        }
+    }
+}
+

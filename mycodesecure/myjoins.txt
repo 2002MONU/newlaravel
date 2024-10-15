@@ -1,0 +1,34 @@
+join('product_sub_categories', 'product_sub_categories.productcategory_id', '=', 'product_categories.id')
+        ->leftJoin('product_images', function ($join) {
+            $join->on('product_images.sub_category_id', '=', 'product_sub_categories.id')
+                 ->orOn('product_images.category_id', '=', 'product_categories.id');
+        })
+        ->leftJoin('product_services', function ($join) {
+            $join->on('product_services.sub_category_id', '=', 'product_sub_categories.id')
+                 ->orOn('product_services.category_id', '=', 'product_categories.id');
+        })
+        ->where('product_categories.status', '=', 1)
+        ->where('product_sub_categories.status', '=', 1)
+        ->select('product_categories.id as category_id',
+         'product_categories.slug',
+         'product_categories.productcategory',
+        'product_sub_categories.id as subcategory_id',
+        'product_sub_categories.sub_slug',
+        'product_sub_categories.productsubcategory',
+        'product_sub_categories.productcategory_id',
+        'product_sub_categories.url',
+        'product_sub_categories.title',
+        'product_sub_categories.description',
+        'product_sub_categories.services',
+        'product_sub_categories.priority',
+        'product_images.sub_category_id',
+        'product_images.category_id',
+        'product_images.image',
+        'product_services.sub_category_id',
+        'product_services.category_id',
+        'product_services.title',
+        'product_services.image',
+        )
+        ->distinct()
+        ->get()
+        ->groupBy('category_id')

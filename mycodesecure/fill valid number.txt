@@ -1,0 +1,18 @@
+$(document).ready(function() {
+    $('#phone').on('input', function() {
+        var phoneNumber = $(this).val();
+        var message = '';
+
+        // Check if the input is a number
+        if (!(/^\d+$/.test(phoneNumber))) {
+            message = 'Please enter numbers only';
+        }
+        // Check if the input is between 10 and 12 digits long
+        else if (phoneNumber.length < 10 || phoneNumber.length > 12) {
+            message = 'Please enter a number between 10 and 12 digits long';
+        }
+
+        // Show the message
+        $('#phone-message').text(message);
+    });
+});

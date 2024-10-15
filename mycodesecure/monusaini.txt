@@ -1,0 +1,13 @@
+user name = rjycitya_cityadz
+
+password = OyDXQ?JRO*cn
+
+database =  rjycitya_cityadz
+
+new databse details 
+
+user name =  cityadz.co.in
+
+password = v2J$rS(2ZgRD
+
+database =  rjycitya_cityadz-3139303a44

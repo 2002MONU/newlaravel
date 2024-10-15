@@ -1,0 +1,1 @@
+{{ $premium->status == 0 ? 'selected' : '' }}

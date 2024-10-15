@@ -1,0 +1,7 @@
+@php
+                        $description = strip_tags($product->description); // Remove HTML tags
+                        $description_words = explode(' ', $description);
+                        $description_limit = 50;
+                        $trimmed_description = implode(' ', array_slice($description_words, 0, $description_limit));
+                    @endphp
+                    <p>{{ $trimmed_description }}</p>

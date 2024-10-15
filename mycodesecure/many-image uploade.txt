@@ -1,0 +1,8 @@
+ foreach (['about_banner', 'category_banner', 'gallery_banner', 'contact_banner', 'testimonial_image', 'logo','favicon'] as $imageField) {
+            if ($request->hasFile($imageField)) {
+                $file = $request->file($imageField);
+                $filename = time() .'.' . $file->getClientOriginalExtension();
+                $file->move(public_path('website/dynamics/other'), $filename);
+                $details->$imageField = $filename;
+            }
+        }

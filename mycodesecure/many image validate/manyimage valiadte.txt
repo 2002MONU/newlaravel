@@ -1,0 +1,34 @@
+ document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.file-input').forEach(function(input) {
+            input.addEventListener('change', function(e) {
+                var file = e.target.files[0];
+                var messageId = 'message' + e.target.id.replace('fileInput', '');
+                if (file) {
+                    var fileType = file.name.split('.').pop().toLowerCase();
+                    var validTypes = ['png', 'jpg', 'jpeg'];
+                    if (validTypes.includes(fileType)) {
+                        document.getElementById(messageId).innerText = 'You have selected a ' + fileType.toUpperCase() + ' file.';
+                    } else {
+                        document.getElementById(messageId).innerText = 'Please select a PNG, JPG, or JPEG file.';
+                    }
+                }
+            });
+        });
+    });
+
+
+
+
+ <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="image">Door Image 3</label>
+                                <input type="file"  class="form-control file-input" name="image3"  id="fileInput3">
+                                <span class="text-danger">(NOTE-PNG,JPG,JPEG,Size-512KB,Min_Dim-300X400,Max_Dim-900X1300)</span>
+                                <span id="message3" class="text-danger"></span>
+                                @if ($errors->has('image3'))
+                                <span class="text-danger">
+                                    <strong>{{ $errors->first('image3') }}.</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>

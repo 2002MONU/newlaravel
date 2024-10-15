@@ -1,0 +1,4 @@
+AIzaSyA-D5Rtw5fouzXemH7PvG51wT-8zWSo7AE   -- google map api 
+
+
+ $footer = FooterDetail::find(1);

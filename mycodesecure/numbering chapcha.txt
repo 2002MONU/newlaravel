@@ -1,0 +1,35 @@
+<form id="contactForm" method="POST" action="{{ route('submit.contact.form') }}">
+    @csrf
+    <!-- Display the CAPTCHA code -->
+    <label for="captcha">CAPTCHA Code: <span id="captchaCode">{{ $captcha }}</span></label>
+    <!-- Input field for the user to enter the CAPTCHA code -->
+    <input type="text" id="captcha" name="captcha" placeholder="Enter CAPTCHA code">
+    <!-- Display validation errors -->
+    @error('captcha')
+        <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
+    <!-- Refresh button for CAPTCHA -->
+    <button type="button" id="refreshCaptcha">Refresh CAPTCHA</button>
+    <!-- Submit button -->
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    // JavaScript for refreshing CAPTCHA
+    document.getElementById('refreshCaptcha').addEventListener('click', function() {
+        // Generate a new random CAPTCHA code
+        var newCaptcha = Math.floor(Math.random() * 9000) + 1000;
+        // Update the displayed CAPTCHA code
+        document.getElementById('captchaCode').innerText = newCaptcha;
+    });
+
+    // JavaScript for client-side validation
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        var captchaInput = document.getElementById('captcha').value;
+        var captchaCode = document.getElementById('captchaCode').innerText;
+        if (captchaInput !== captchaCode) {
+            alert('Invalid CAPTCHA code. Please try again.');
+            event.preventDefault(); // Prevent form submission
+        }
+    });
+</script>

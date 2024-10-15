@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laravel Dropdown</title>
+</head>
+<body>
+    <form action="{{ url('/items') }}" method="GET">
+        <label for="status">Filter by status:</label>
+        <select name="status" id="status" onchange="this.form.submit()">
+            <option value="active" {{ $status == 'active' ? 'selected' : '' }}>Active</option>
+            <option value="inactive" {{ $status == 'inactive' ? 'selected' : '' }}>Inactive</option>
+        </select>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($items as $item)
+                <tr>
+                    <td>{{ $item->id }}</td>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->status ? 'Active' : 'Inactive' }}</td>
+                    <td>
+                        <form action="{{ url('/items/change-status/'.$item->id) }}" method="POST">
+                            @csrf
+                            <button type="submit">{{ $item->status ? 'Deactivate' : 'Activate' }}</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</body>
+</html>

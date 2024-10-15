@@ -1,0 +1,76 @@
+@media (max-width: 480px) {
+
+    .m-b30 {
+        margin-bottom: 5px !important; 
+    }
+
+    h3 {
+        font-size: 26px;
+        line-height: 30px;
+        color: #3f3e3e;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    p {
+        line-height: 24px;
+        margin-bottom: 5px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 7px;
+       
+    }
+
+    .section-full.p-t80 {
+        padding-top: 20px;
+    }
+
+    .widget-title, .widget-title-two, .widget-title-three {
+        padding-bottom: 15px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .p-t30 {
+        padding-top: 7px;
+    }
+
+
+    .page-content{
+        height: 300px !important;
+    }
+
+    
+    .top-bar{
+        display: none;
+    }
+    .sticky-header{
+        height: 70px;
+    }
+
+
+
+    /* .rev_slider_wrapper{
+        height: 300px !important;
+    } */
+
+    .apli-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .knowledge-section {
+        background-color: #0a2a751f;
+        padding: 10px ;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .kf-table-con {
+        padding: 10px;
+    }
+    
+
+
+   
+  }

@@ -1,0 +1,17 @@
+<script>
+        // Check if there is a success message and show it
+        var successMsg = '{{ Session::get('success') }}';
+        var hasSuccess = '{{ Session::has('success') }}';
+        if (hasSuccess) {
+            alert(successMsg);
+        }
+
+        // Check for error messages and show them
+        @if ($errors->any())
+            var errorMsg = '';
+            @foreach ($errors->all() as $error)
+                errorMsg += '{{ $error }}\n';
+            @endforeach
+            alert(errorMsg);
+        @endif
+    </script>
